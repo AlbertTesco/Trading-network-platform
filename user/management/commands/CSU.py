@@ -6,7 +6,13 @@ User = get_user_model()
 
 
 class Command(BaseCommand):
-    help = 'Create a superuser'
+    """
+    Creates a superuser.
+
+    Prompts the user to enter their email address, password, and password confirmation.
+    If the passwords do not match, an error is displayed.
+    If the superuser is created successfully, a success message is displayed.
+    """
 
     def handle(self, *args, **options):
         email = input('Enter your email address: ')

@@ -2,6 +2,16 @@ from django.db import models
 
 
 class Product(models.Model):
+    """
+    A product in the system.
+
+    Attributes:
+        name (str): The name of the product.
+        model (str): The model of the product.
+        release_date (date): The release date of the product.
+        created_at (date): The date the product was created.
+    """
+
     name = models.CharField(max_length=100, verbose_name='Название')
     model = models.CharField(max_length=100, verbose_name='Модель')
     release_date = models.DateField(verbose_name='Дата выпуска')
